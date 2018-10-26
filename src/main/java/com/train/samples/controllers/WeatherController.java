@@ -21,13 +21,14 @@ public class WeatherController {
 	@RequestMapping("/current/{country}/{city}")
 	public Weather getWeather(@PathVariable String country,
 			@PathVariable String city) {
+		System.out.println("current::{country}="+country+"{city}="+city);
 		return this.weatherService.getWeather(country, city);
 	}
 
 	@RequestMapping("/forecast/{days}/{country}/{city}")
 	public WeatherForecast getWeatherForecast(@PathVariable String days, @PathVariable String country,
 			@PathVariable String city) {
-		
+		System.out.println("forecast::{days}="+days+"{country}="+country+"{city}="+city);
 		return this.weatherService.getWeatherForecast(days, country, city);
 
 	}

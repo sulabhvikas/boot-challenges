@@ -1,8 +1,11 @@
 package com.train.samples.services;
 
+import org.springframework.stereotype.Service;
+
 import com.train.samples.models.Weather;
 import com.train.samples.models.WeatherForecast;
 
+@Service
 public class WeatherService {
 	
 	// e.g. http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=96c9189b4377490de31ea173a120bbc5
